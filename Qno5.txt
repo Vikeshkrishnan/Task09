@@ -1,0 +1,35 @@
+package Task09;
+
+import java.util.Scanner;
+
+public class GradingSystem {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Getting input from the user
+        System.out.print("Enter the marks scored by the student: ");
+        int marks = scanner.nextInt();
+
+        // Calculating and printing the grade
+        System.out.println(calculateGrade(marks));
+    }
+
+    public static String calculateGrade(int marks) {
+        if (marks > 100) {
+            return "Invalid Input";
+        } else if (marks >= 90) {
+            return "A";
+        } else if (marks >= 80) {
+            return "B";
+        } else if (marks >= 70) {
+            return "C";
+        } else if (marks >= 60) {
+            return "D";
+        } else if (marks >= 50) {
+            return "E";
+        } else {
+            return "F";
+        }
+    }
+}
